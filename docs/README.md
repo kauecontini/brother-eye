@@ -13,7 +13,7 @@ Status: em andamento
 Status: em andamento
 
 - [x] [Modelo de Competências e Progressão](./01-learning-model/BROTHER_EYE_COMPETENCY_AND_PROGRESSION_MODEL.md)
-- [ ] Especificação Pedagógica do Tutor
+- [x] [Especificação Pedagógica do Tutor](./01-learning-model/BROTHER_EYE_TUTOR_PEDAGOGY_SPEC.md)
 - [ ] Assessment e Skill Evidence
 
 ### 02 — Curriculum
