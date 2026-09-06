@@ -17,8 +17,9 @@ Status: concluído
 - [x] [Assessment e Skill Evidence](./01-learning-model/BROTHER_EYE_ASSESSMENT_AND_SKILL_EVIDENCE.md)
 
 ### 02 — Curriculum
+Status: concluído
 
-- [ ] Brother Eye Curriculum v0.1
+- [x] [Brother Eye Curriculum v0.1](./02-curriculum/BROTHER_EYE_CURRICULUM_V0.1.md)
 
 ### 03 — Product
 
