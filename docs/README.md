@@ -10,11 +10,11 @@ Status: em andamento
 - [x] [Brother Eye — Visão, Missão e Princípios de Aprendizagem](./00-foundation/BROTHER_EYE_VISION_AND_LEARNING_PRINCIPLES.md)
 
 ### 01 — Learning Model
-Status: em andamento
+Status: concluído
 
 - [x] [Modelo de Competências e Progressão](./01-learning-model/BROTHER_EYE_COMPETENCY_AND_PROGRESSION_MODEL.md)
 - [x] [Especificação Pedagógica do Tutor](./01-learning-model/BROTHER_EYE_TUTOR_PEDAGOGY_SPEC.md)
-- [ ] Assessment e Skill Evidence
+- [x] [Assessment e Skill Evidence](./01-learning-model/BROTHER_EYE_ASSESSMENT_AND_SKILL_EVIDENCE.md)
 
 ### 02 — Curriculum
 
