@@ -10,9 +10,9 @@ Status: em andamento
 - [x] [Brother Eye — Visão, Missão e Princípios de Aprendizagem](./00-foundation/BROTHER_EYE_VISION_AND_LEARNING_PRINCIPLES.md)
 
 ### 01 — Learning Model
-Status: próximo
+Status: em andamento
 
-- [ ] Modelo de Competências e Progressão
+- [x] [Modelo de Competências e Progressão](./01-learning-model/BROTHER_EYE_COMPETENCY_AND_PROGRESSION_MODEL.md)
 - [ ] Especificação Pedagógica do Tutor
 - [ ] Assessment e Skill Evidence
 
