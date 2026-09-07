@@ -1,0 +1,19 @@
+[[permission]]
+identifier = "allow-spike-hud-show"
+description = "Show the Spike 1 HUD window from the main diagnostic view."
+commands.allow = ["spike_hud_show"]
+
+[[permission]]
+identifier = "allow-spike-hud-hide"
+description = "Hide the Spike 1 HUD window from the main diagnostic view."
+commands.allow = ["spike_hud_hide"]
+
+[[permission]]
+identifier = "allow-spike-hud-status"
+description = "Read Spike 1 HUD diagnostic status."
+commands.allow = ["spike_hud_status"]
+
+[[permission]]
+identifier = "allow-spike-hud-cycle"
+description = "Run Spike 1 HUD show/hide repetition test."
+commands.allow = ["spike_hud_cycle"]

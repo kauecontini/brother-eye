@@ -20,7 +20,7 @@ Intern → Junior → Mid-Level → Senior → Specialist
 
 Specification Phase V1: concluída
 
-Current phase: Spike 1 — Tauri + HUD
+Current phase: Spike 2 — Hermes managed runtime
 
 ## Documentação
 

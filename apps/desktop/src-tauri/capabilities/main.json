@@ -1,0 +1,14 @@
+{
+  "identifier": "main-capability",
+  "description": "Spike 1 main window may only invoke HUD diagnostic commands.",
+  "windows": ["main"],
+  "permissions": [
+    "allow-spike-hud-show",
+    "allow-spike-hud-hide",
+    "allow-spike-hud-status",
+    "allow-spike-hud-cycle",
+    "core:window:deny-create",
+    "core:webview:deny-create-webview",
+    "core:webview:deny-create-webview-window"
+  ]
+}

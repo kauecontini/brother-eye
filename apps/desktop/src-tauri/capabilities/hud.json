@@ -1,0 +1,6 @@
+{
+  "identifier": "hud-capability",
+  "description": "Spike 1 HUD is display-only and has no IPC privileges.",
+  "windows": ["tutor-hud"],
+  "permissions": []
+}

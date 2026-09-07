@@ -48,7 +48,7 @@ Status: em andamento
 
 Specification Phase V1 — concluída
 
-Fase atual: Spike 1 — Tauri + HUD
+Fase atual: Spike 2 — Hermes managed runtime
 
 ## Progressão oficial
 

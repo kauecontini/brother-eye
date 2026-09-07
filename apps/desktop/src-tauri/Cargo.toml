@@ -1,9 +1,19 @@
 [package]
 name = "brother-eye-desktop-shell"
 version = "0.0.0"
+description = "Brother Eye desktop shell — Spike 1"
+authors = ["Brother Eye"]
 edition = "2021"
 publish = false
 
 [lib]
-name = "brother_eye_desktop_shell"
-path = "src/lib.rs"
+name = "brother_eye_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.6.3", features = [] }
+
+[dependencies]
+tauri = { version = "=2.11.5", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
