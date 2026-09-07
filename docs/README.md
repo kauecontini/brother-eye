@@ -22,11 +22,11 @@ Status: concluído
 - [x] [Brother Eye Curriculum v0.1](./02-curriculum/BROTHER_EYE_CURRICULUM_V0.1.md)
 
 ### 03 — Product
-Status: em andamento
+Status: concluído
 
 - [x] [Student Experience & UX](./03-product/BROTHER_EYE_STUDENT_EXPERIENCE_AND_UX.md)
 - [x] [Visual Design System](./03-product/BROTHER_EYE_VISUAL_DESIGN_SYSTEM.md)
-- [ ] V1 Scope & Roadmap
+- [x] [V1 Scope & Roadmap](./03-product/BROTHER_EYE_V1_SCOPE_AND_ROADMAP.md)
 
 ### 04 — Architecture
 
