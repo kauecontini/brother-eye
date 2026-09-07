@@ -41,3 +41,6 @@ target/
 # Java / Gradle
 .gradle/
 build/
+
+# Managed runtimes (not source of truth)
+.runtime/

@@ -48,7 +48,7 @@ Status: em andamento
 
 Specification Phase V1 — concluída
 
-Fase atual: Spike 2 — Hermes managed runtime
+Fase atual: Spike 3 — Cua read-only
 
 ## Progressão oficial
 

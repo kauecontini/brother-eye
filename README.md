@@ -20,7 +20,7 @@ Intern → Junior → Mid-Level → Senior → Specialist
 
 Specification Phase V1: concluída
 
-Current phase: Spike 2 — Hermes managed runtime
+Current phase: Spike 3 — Cua read-only
 
 ## Documentação
 
