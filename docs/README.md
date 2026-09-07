@@ -5,7 +5,7 @@ Este diretório contém as especificações conceituais, pedagógicas, funcionai
 ## Ordem de construção
 
 ### 00 — Foundation
-Status: em andamento
+Status: concluído
 
 - [x] [Brother Eye — Visão, Missão e Princípios de Aprendizagem](./00-foundation/BROTHER_EYE_VISION_AND_LEARNING_PRINCIPLES.md)
 
@@ -34,8 +34,13 @@ Status: concluído
 - [x] [Technical Architecture](./04-architecture/BROTHER_EYE_TECHNICAL_ARCHITECTURE.md)
 
 ### 05 — Evaluation
+Status: concluído
 
-- [ ] Evaluation Framework
+- [x] [Evaluation Framework](./05-evaluation/BROTHER_EYE_EVALUATION_FRAMEWORK.md)
+
+Specification Phase V1 — concluída
+
+Próxima fase: Engineering Bootstrap
 
 ## Progressão oficial
 
