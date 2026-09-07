@@ -25,7 +25,7 @@ Status: concluído
 Status: em andamento
 
 - [x] [Student Experience & UX](./03-product/BROTHER_EYE_STUDENT_EXPERIENCE_AND_UX.md)
-- [ ] Visual Design System
+- [x] [Visual Design System](./03-product/BROTHER_EYE_VISUAL_DESIGN_SYSTEM.md)
 - [ ] V1 Scope & Roadmap
 
 ### 04 — Architecture
