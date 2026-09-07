@@ -18,9 +18,9 @@ Intern → Junior → Mid-Level → Senior → Specialist
 
 ## Status
 
-O projeto encontra-se atualmente em fase de especificação e design.
+Specification Phase V1: concluída
 
-Nenhuma arquitetura técnica ou implementação de produto deve ser considerada definida enquanto os documentos fundamentais não forem concluídos.
+Current phase: Engineering Bootstrap
 
 ## Documentação
 

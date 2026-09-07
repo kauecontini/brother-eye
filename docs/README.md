@@ -38,9 +38,17 @@ Status: concluído
 
 - [x] [Evaluation Framework](./05-evaluation/BROTHER_EYE_EVALUATION_FRAMEWORK.md)
 
+### 06 — Engineering
+Status: em andamento
+
+- [x] [Engineering Bootstrap](./06-engineering/ENGINEERING_STATE.md)
+- [ ] Architecture Decision Records
+- [ ] A0 — Contracts & Repo Skeleton
+- [ ] Architecture Spikes
+
 Specification Phase V1 — concluída
 
-Próxima fase: Engineering Bootstrap
+Fase atual: Engineering Bootstrap
 
 ## Progressão oficial
 
