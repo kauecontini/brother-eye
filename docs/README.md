@@ -29,8 +29,9 @@ Status: concluído
 - [x] [V1 Scope & Roadmap](./03-product/BROTHER_EYE_V1_SCOPE_AND_ROADMAP.md)
 
 ### 04 — Architecture
+Status: concluído
 
-- [ ] Technical Architecture
+- [x] [Technical Architecture](./04-architecture/BROTHER_EYE_TECHNICAL_ARCHITECTURE.md)
 
 ### 05 — Evaluation
 
