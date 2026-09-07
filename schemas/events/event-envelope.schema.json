@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.brother-eye.local/events/event-envelope.schema.json",
+  "title": "Brother Eye Event Envelope",
+  "description": "Envelope transport-agnostic do event ledger. Não é específico de Burp. sequence monotônica por Session é responsabilidade do producer/Core.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "session_id",
+    "sequence",
+    "occurred_at",
+    "received_at",
+    "source",
+    "scope",
+    "payload",
+    "artifact_refs",
+    "privacy"
+  ],
+  "properties": {
+    "schema_version": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SchemaVersion"
+    },
+    "event_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "session_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Monotônico por Session. O schema não prova monotonicidade; o Core/producer é responsável."
+    },
+    "occurred_at": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/UtcDateTime"
+    },
+    "received_at": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/UtcDateTime"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "instance_id"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Origem do evento. Extensível; não acoplar o envelope a um adapter."
+        },
+        "instance_id": {
+          "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exemplo documentado na Technical Architecture: in_scope. Catálogo fechado pode ser versionado depois."
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "data"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data": {
+          "type": "object",
+          "description": "Payload especializado futuro. Mantido aberto de propósito no envelope 0.1.0."
+        }
+      }
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["redaction_status"],
+      "properties": {
+        "redaction_status": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exemplo documentado: sanitized. String aberta em 0.1.0 para não inventar catálogo."
+        }
+      }
+    }
+  }
+}

@@ -1,26 +1,26 @@
 # Brother Eye — Engineering State
 
 Status:
-Architecture Decision Records — Complete
+A0 — Contracts & Repo Skeleton — Complete
 
 Specification:
 Frozen for V1 implementation baseline
 
 Current phase:
-A0 — Contracts & Repo Skeleton
+Spike 1 — Tauri + HUD
 
 Completed:
 - Specification Phase V1
 - Engineering Bootstrap
 - ADR-001 → ADR-010
+- A0 — Contracts & Repo Skeleton
 
 Next:
-1. A0 — Contracts & Repo Skeleton
-2. Spike 1 — Tauri + HUD
-3. Spike 2 — Hermes managed runtime
-4. Spike 3 — Cua read-only
-5. Spike 4 — Burp Montoya
-6. Spike 5 — Burp → Core → Hermes → HUD
+1. Spike 1 — Tauri + HUD
+2. Spike 2 — Hermes managed runtime
+3. Spike 3 — Cua read-only
+4. Spike 4 — Burp Montoya
+5. Spike 5 — Burp → Core → Hermes → HUD
 
 Architecture baseline:
 

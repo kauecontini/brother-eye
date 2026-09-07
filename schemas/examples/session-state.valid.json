@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "session_id": "01J7AUTHSESSION0001",
+  "lifecycle": "ACTIVE",
+  "mode": "PRACTICE",
+  "created_at": "2026-09-07T03:00:00Z",
+  "updated_at": "2026-09-07T03:12:00Z",
+  "objective": "Identificar falha de object-level authorization entre duas identidades.",
+  "subobjective": "Comparar acesso do User A e User B ao mesmo recurso.",
+  "scope": [
+    {
+      "host": "127.0.0.1",
+      "protocol": "http",
+      "port": 8080,
+      "path_rule": "/api/orders/*",
+      "authorized": true
+    }
+  ],
+  "focus_skill_ids": ["Web.Authorization.ObjectLevel"],
+  "observation_health": "OK",
+  "active_hypothesis_ids": ["01J7AUTHHYPOTHESIS1"],
+  "finding_ids": ["01J7AUTHFINDING0001"],
+  "evidence_ids": ["01J7AUTHEVIDENCE001"],
+  "open_questions": [
+    "O User B consegue ler o pedido do User A sem mudança de role?"
+  ],
+  "highest_hint_used": "H1"
+}

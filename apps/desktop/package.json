@@ -1,0 +1,10 @@
+{
+  "name": "@brother-eye/desktop",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

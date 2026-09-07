@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.brother-eye.local/events/observation.schema.json",
+  "title": "Brother Eye Observation",
+  "description": "Interpretação estruturada derivada de fatos/eventos. Não é SkillEvidence e não atualiza Learner Model nem score.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "observation_id",
+    "session_id",
+    "occurred_at",
+    "source_event_ids",
+    "source_type",
+    "statement",
+    "classification",
+    "source_confidence",
+    "classification_confidence",
+    "artifact_refs"
+  ],
+  "properties": {
+    "schema_version": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SchemaVersion"
+    },
+    "observation_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "session_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "occurred_at": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/UtcDateTime"
+    },
+    "source_event_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    },
+    "source_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/ObservationClassification"
+    },
+    "source_confidence": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/ConfidenceScore"
+    },
+    "classification_confidence": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/ConfidenceScore"
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    }
+  }
+}

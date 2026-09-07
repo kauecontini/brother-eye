@@ -20,7 +20,7 @@ Intern → Junior → Mid-Level → Senior → Specialist
 
 Specification Phase V1: concluída
 
-Current phase: A0 — Contracts & Repo Skeleton
+Current phase: Spike 1 — Tauri + HUD
 
 ## Documentação
 

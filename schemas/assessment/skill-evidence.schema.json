@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.brother-eye.local/assessment/skill-evidence.schema.json",
+  "title": "Brother Eye SkillEvidence",
+  "description": "Unidade oficial de evidence. Não calcula score. Não altera Learner Model sozinha. Provenance estruturada é obrigatória.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "skill_evidence_id",
+    "learner_id",
+    "session_id",
+    "skill_id",
+    "dimension",
+    "rubric_level",
+    "evidence_quality",
+    "assessor_confidence",
+    "difficulty",
+    "novelty",
+    "highest_hint_used",
+    "assessment_contamination",
+    "provenance",
+    "status",
+    "created_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SchemaVersion"
+    },
+    "skill_evidence_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "learner_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "session_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "skill_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "dimension": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SkillDimension"
+    },
+    "rubric_level": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/RubricLevel"
+    },
+    "evidence_quality": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EvidenceQuality"
+    },
+    "assessor_confidence": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/AssessorClassificationConfidence"
+    },
+    "difficulty": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/Difficulty"
+    },
+    "novelty": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/Novelty"
+    },
+    "highest_hint_used": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/HintLevel"
+    },
+    "assessment_contamination": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/AssessmentContamination"
+    },
+    "evidence_group_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/ProvenanceRef"
+      }
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Texto adicional opcional. Não substitui provenance estruturada."
+    },
+    "status": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SkillEvidenceStatus"
+    },
+    "created_at": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/UtcDateTime"
+    },
+    "correction_of": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    }
+  },
+  "$defs": {
+    "ProvenanceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "ref"],
+      "properties": {
+        "kind": {
+          "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/ProvenanceKind"
+        },
+        "ref": {
+          "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.brother-eye.local/curriculum/skill.schema.json",
+  "title": "Brother Eye Curriculum Skill",
+  "description": "Subset mínimo do contrato de Skill. A0 não popula o curriculum completo.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "skill_id",
+    "display_name",
+    "domain",
+    "area",
+    "criticality",
+    "functional_type",
+    "prerequisite_skill_ids",
+    "description",
+    "curriculum_version"
+  ],
+  "properties": {
+    "schema_version": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SchemaVersion"
+    },
+    "skill_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "area": {
+      "type": "string",
+      "minLength": 1
+    },
+    "criticality": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SkillCriticality"
+    },
+    "functional_type": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SkillFunctionalType"
+    },
+    "prerequisite_skill_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "curriculum_version": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SchemaVersion"
+    },
+    "expectation_level": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/ExpectationLevel"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "skill_evidence_id": "01J7AUTHSKILLEVID001",
+  "learner_id": "01J7AUTHLEARNER0001",
+  "session_id": "01J7AUTHSESSION0001",
+  "skill_id": "Web.Authorization.ObjectLevel",
+  "dimension": "REASONING",
+  "rubric_level": "R3",
+  "evidence_quality": "STRONG",
+  "assessor_confidence": "HIGH",
+  "difficulty": "D3",
+  "novelty": "C1",
+  "highest_hint_used": "H1",
+  "assessment_contamination": "NONE",
+  "evidence_group_id": "01J7AUTHEVIDGROUP001",
+  "provenance": [
+    {
+      "kind": "OBSERVATION",
+      "ref": "01J7AUTHOBSERVATION1"
+    },
+    {
+      "kind": "EVENT",
+      "ref": "01J7AUTHEVENT000001"
+    }
+  ],
+  "rationale": "O aluno formulou a hipótese de object-level authorization antes de pedir hint e propôs controle entre duas identidades.",
+  "status": "VALID",
+  "created_at": "2026-09-07T03:14:00Z"
+}

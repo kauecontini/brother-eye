@@ -43,12 +43,12 @@ Status: em andamento
 
 - [x] [Engineering Bootstrap](./06-engineering/ENGINEERING_STATE.md)
 - [x] [Architecture Decision Records](./04-architecture/adr/README.md)
-- [ ] A0 — Contracts & Repo Skeleton
+- [x] A0 — Contracts & Repo Skeleton
 - [ ] Architecture Spikes
 
 Specification Phase V1 — concluída
 
-Fase atual: A0 — Contracts & Repo Skeleton
+Fase atual: Spike 1 — Tauri + HUD
 
 ## Progressão oficial
 

@@ -1,0 +1,9 @@
+[package]
+name = "brother-eye-desktop-shell"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "brother_eye_desktop_shell"
+path = "src/lib.rs"

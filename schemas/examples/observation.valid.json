@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.1.0",
+  "observation_id": "01J7AUTHOBSERVATION1",
+  "session_id": "01J7AUTHSESSION0001",
+  "occurred_at": "2026-09-07T03:11:42Z",
+  "source_event_ids": ["01J7AUTHEVENT000001"],
+  "source_type": "http.response",
+  "statement": "User B recebeu HTTP 200 ao requisitar /api/orders/1001, recurso associado ao User A.",
+  "classification": "FACT",
+  "source_confidence": 0.94,
+  "classification_confidence": 0.91,
+  "artifact_refs": ["01J7AUTHARTIFACT001"]
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.brother-eye.local/common/session-state.schema.json",
+  "title": "Brother Eye Session State",
+  "description": "Domain state estruturado da Session. Não é uma sessão de chat do Hermes e não inclui model/provider.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "lifecycle",
+    "mode",
+    "created_at",
+    "updated_at",
+    "objective",
+    "scope",
+    "focus_skill_ids",
+    "observation_health",
+    "active_hypothesis_ids",
+    "finding_ids",
+    "evidence_ids",
+    "open_questions"
+  ],
+  "properties": {
+    "schema_version": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SchemaVersion"
+    },
+    "session_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "lifecycle": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SessionLifecycle"
+    },
+    "mode": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SessionMode"
+    },
+    "created_at": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/UtcDateTime"
+    },
+    "updated_at": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/UtcDateTime"
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subobjective": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ScopeRule"
+      }
+    },
+    "focus_skill_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    },
+    "observation_health": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/ObservationHealth"
+    },
+    "active_hypothesis_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    },
+    "finding_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "highest_hint_used": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/HintLevel"
+    }
+  },
+  "$defs": {
+    "ScopeRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["host", "protocol", "authorized"],
+      "properties": {
+        "host": {
+          "type": "string",
+          "minLength": 1
+        },
+        "protocol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "path_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authorized": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.1.0",
+  "skill_id": "Web.Authorization.ObjectLevel",
+  "display_name": "Object-Level Authorization",
+  "domain": "Web",
+  "area": "Authorization",
+  "criticality": "CORE",
+  "functional_type": "REASONING",
+  "prerequisite_skill_ids": ["Web.Identity.SessionBinding"],
+  "description": "Identificar e testar falhas de autorização em nível de objeto entre identidades distintas.",
+  "curriculum_version": "0.1.0",
+  "expectation_level": "A2"
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.brother-eye.local/assessment/evidence-group.schema.json",
+  "title": "Brother Eye EvidenceGroup",
+  "description": "Agrupa SkillEvidence correlacionada para não inflar Confidence como observações independentes. Não define matemática de Confidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_group_id",
+    "session_id",
+    "member_skill_evidence_ids",
+    "relationship",
+    "created_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/SchemaVersion"
+    },
+    "evidence_group_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "session_id": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+    },
+    "member_skill_evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/EntityId"
+      }
+    },
+    "relationship": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Relação descritiva entre membros. Matemática de Confidence fica fora deste schema."
+    },
+    "created_at": {
+      "$ref": "https://schemas.brother-eye.local/common/domain-enums.schema.json#/$defs/UtcDateTime"
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.brother-eye.local/common/domain-enums.schema.json",
+  "title": "Brother Eye domain enums",
+  "description": "Enums canônicos derivados das especificações aprovadas. Não duplicar por linguagem sem teste de compatibilidade.",
+  "$defs": {
+    "EntityId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9._:-]+$",
+      "description": "Opaque identifier. Aceita UUIDv7/ULID futuros sem acoplar o schema a uma library."
+    },
+    "UtcDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time. Persistido em UTC."
+    },
+    "SchemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Versão semver do payload. Breaking change exige nova versão."
+    },
+    "ConfidenceScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Intervalo unitário [0, 1]. 0 = nenhuma confiança, 1 = máxima. Não é Mastery e não é score oficial."
+    },
+    "SessionMode": {
+      "type": "string",
+      "enum": ["LEARN", "PRACTICE", "CHALLENGE", "EXAM", "REVIEW", "TEACH_BACK"]
+    },
+    "SessionLifecycle": {
+      "type": "string",
+      "enum": [
+        "CREATED",
+        "READY",
+        "ACTIVE",
+        "PAUSED",
+        "DEGRADED",
+        "ENDING",
+        "COMPLETED",
+        "INVALIDATED"
+      ]
+    },
+    "TutorIntervention": {
+      "type": "string",
+      "enum": [
+        "SILENT",
+        "NUDGE",
+        "ASK",
+        "TEACH",
+        "WARN",
+        "EVIDENCE_CHECKPOINT",
+        "STOP"
+      ]
+    },
+    "HintLevel": {
+      "type": "string",
+      "enum": ["H0", "H1", "H2", "H3", "H4", "H5"]
+    },
+    "RubricLevel": {
+      "type": "string",
+      "enum": ["R0", "R1", "R2", "R3", "R4", "R5"]
+    },
+    "Difficulty": {
+      "type": "string",
+      "enum": ["D1", "D2", "D3", "D4", "D5"]
+    },
+    "Novelty": {
+      "type": "string",
+      "enum": ["C0", "C1", "C2", "C3"]
+    },
+    "EvidenceQuality": {
+      "type": "string",
+      "enum": ["STRONG", "MODERATE", "WEAK"]
+    },
+    "EvidenceRole": {
+      "type": "string",
+      "enum": [
+        "BASELINE",
+        "TRIGGER",
+        "CONTROL",
+        "REPRODUCTION",
+        "IMPACT",
+        "REMEDIATION_TEST"
+      ]
+    },
+    "SkillDimension": {
+      "type": "string",
+      "enum": [
+        "KNOWLEDGE",
+        "REASONING",
+        "EXECUTION",
+        "AUTONOMY",
+        "TRANSFER",
+        "EVIDENCE_COMMUNICATION"
+      ]
+    },
+    "HealthStatus": {
+      "type": "string",
+      "enum": ["OK", "DEGRADED", "FAILED"]
+    },
+    "ObservationHealth": {
+      "$ref": "#/$defs/HealthStatus"
+    },
+    "AssessmentContamination": {
+      "type": "string",
+      "enum": ["NONE", "LOW", "MODERATE", "HIGH", "INVALID"]
+    },
+    "SkillEvidenceStatus": {
+      "type": "string",
+      "enum": ["DRAFT", "VALID", "DISPUTED", "CORRECTED", "INVALIDATED"],
+      "description": "DRAFT cobre SkillEvidenceDraft. valid/disputed/corrected/invalidated vêm do Assessment spec."
+    },
+    "FindingState": {
+      "type": "string",
+      "enum": [
+        "OBSERVATION",
+        "HYPOTHESIS",
+        "CANDIDATE",
+        "REPRODUCED",
+        "IMPACT",
+        "VALIDATED",
+        "REPORTED",
+        "REJECTED",
+        "FALSE_POSITIVE",
+        "INCONCLUSIVE"
+      ],
+      "description": "Finding Lifecycle (UX + Visual Design System): Observation → Hypothesis → Candidate → Reproduced → Impact → Validated → Reported, com ramos Rejected/False Positive e Inconclusive."
+    },
+    "ObservationClassification": {
+      "type": "string",
+      "enum": ["FACT", "INFERENCE", "HYPOTHESIS"],
+      "description": "Observation não é SkillEvidence. FACT, INFERENCE e HYPOTHESIS não devem ser misturados."
+    },
+    "AssessorClassificationConfidence": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH"]
+    },
+    "SkillCriticality": {
+      "type": "string",
+      "enum": ["CORE", "IMPORTANT", "SPECIALIZED"]
+    },
+    "SkillFunctionalType": {
+      "type": "string",
+      "enum": [
+        "CONCEPT",
+        "REASONING",
+        "OPERATIONAL",
+        "DOMAIN",
+        "COMMUNICATION",
+        "TOOL"
+      ]
+    },
+    "ExpectationLevel": {
+      "type": "string",
+      "enum": ["A0", "A1", "A2", "A3", "A4", "A5"]
+    },
+    "ProvenanceKind": {
+      "type": "string",
+      "enum": [
+        "OBSERVATION",
+        "EVENT",
+        "ARTIFACT",
+        "ASSESSMENT",
+        "HUMAN_REVIEW"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.1.0",
+  "evidence_group_id": "01J7AUTHEVIDGROUP001",
+  "session_id": "01J7AUTHSESSION0001",
+  "member_skill_evidence_ids": [
+    "01J7AUTHSKILLEVID001",
+    "01J7AUTHSKILLEVID002"
+  ],
+  "relationship": "same_authorization_investigation",
+  "created_at": "2026-09-07T03:14:05Z"
+}
