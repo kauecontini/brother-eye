@@ -42,13 +42,13 @@ Status: concluído
 Status: em andamento
 
 - [x] [Engineering Bootstrap](./06-engineering/ENGINEERING_STATE.md)
-- [ ] Architecture Decision Records
+- [x] [Architecture Decision Records](./04-architecture/adr/README.md)
 - [ ] A0 — Contracts & Repo Skeleton
 - [ ] Architecture Spikes
 
 Specification Phase V1 — concluída
 
-Fase atual: Engineering Bootstrap
+Fase atual: A0 — Contracts & Repo Skeleton
 
 ## Progressão oficial
 
